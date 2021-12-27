@@ -1,3 +1,5 @@
+# cncamp-a05
+
 ## 作业要求
 把我们的 httpserver 服务以 Istio Ingress Gateway 的形式发布出来
 - 如何实现安全保证
