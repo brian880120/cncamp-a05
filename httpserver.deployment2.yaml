@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: service1
+  namespace: webservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+      creationTimestamp: null
+      labels:
+        app: service1
+    spec:
+      containers:
+      - image: brian880120/cncampa05-httpserver-tracing-02:v1
+        name: service1
+        volumeMounts:
+        - mountPath: /var/log
+          name: log-volume
+        resources:
+          limits:
+            cpu: 700m
+            memory: 200Mi
+          requests:
+            cpu: 500m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always
+      volumes:
+      - name: log-volume
+        emptyDir: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  name: service1
+  namespace: webservice
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: service1
