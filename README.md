@@ -25,3 +25,8 @@ make deploy
 ### 通过VirtualService对路由的配置转发特定路径
 ![Screenshot from 2021-12-27 02-48-11](https://user-images.githubusercontent.com/10457633/147448426-01b6151c-fc2b-4105-a83c-4b7dbd85db16.png)
 ![Screenshot from 2021-12-27 02-48-44](https://user-images.githubusercontent.com/10457633/147448430-710cf353-fcfe-4b91-8da0-3de004208f68.png)
+
+### 在http-server代码中按照教程加入请求转发逻辑，并将镜像分别推送到docker hub, ```tracing```测试结果如下：
+![Screenshot from 2021-12-27 02-56-36](https://user-images.githubusercontent.com/10457633/147449109-d8d0d448-26e2-436c-bda9-403d04c9d9e6.png)
+
+### https配置遇到些问题，暂时未能实现
