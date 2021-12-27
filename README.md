@@ -18,3 +18,10 @@ make deploy
 ```
 主要的YAML文件包括三个展示```tracing```的```deployment```文件以及一个```istio gateway和virtualservice```文件
 ![Screenshot from 2021-12-27 02-36-07](https://user-images.githubusercontent.com/10457633/147447693-f01bf2ab-d5ec-45b9-b8ec-ae3356362d73.png)
+
+### 通过Istio Ingress Gateway发布http-server
+![Screenshot from 2021-12-27 02-43-56](https://user-images.githubusercontent.com/10457633/147448062-ae8926ed-99b7-4663-8036-ff7fc353411f.png)
+
+### 通过VirtualService对路由的配置转发特定路径
+![Screenshot from 2021-12-27 02-48-11](https://user-images.githubusercontent.com/10457633/147448426-01b6151c-fc2b-4105-a83c-4b7dbd85db16.png)
+![Screenshot from 2021-12-27 02-48-44](https://user-images.githubusercontent.com/10457633/147448430-710cf353-fcfe-4b91-8da0-3de004208f68.png)
