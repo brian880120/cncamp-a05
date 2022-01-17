@@ -30,3 +30,8 @@ make deploy
 ![Screenshot from 2021-12-27 02-56-36](https://user-images.githubusercontent.com/10457633/147449109-d8d0d448-26e2-436c-bda9-403d04c9d9e6.png)
 
 ### https配置遇到些问题，暂时未能实现
+
+
+[极客时间云原生第0期毕业总结.pdf](https://github.com/brian880120/cncamp-a05/files/7878362/0.pdf)
+
+
